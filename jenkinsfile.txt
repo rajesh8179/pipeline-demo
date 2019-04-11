@@ -1,0 +1,14 @@
+pipeline{
+agent any
+stages {
+stage("compile stage")
+{
+steps{
+with maven (maven:3.2.0){
+sh'mvn clean compile'
+}
+}
+}
+}
+}
+}
